@@ -4,25 +4,32 @@ const { createClientPG, destroyClientPG } = require('../utils/clientePG')
 const router = express.Router()
 
 router.get('/', async (req, res) => {
-
+  const client = await createClientPG()
+  // querys
+  await destroyClientPG(client)
+  res.json({
+    // resultado das querys aqui!
+  })
 })
 
 router.get('/:id', async (req, res) => {
-
+  const client = await createClientPG()
+  // querys
+  await destroyClientPG(client)
+  res.json({
+    // resultado das querys aqui!
+  })
 })
 
 router.post('/', async (req, res) => {
   const client = await createClientPG()
-  await client.query('BEGIN')
   try {
     // querys
-    await client.query('COMMIT')
     await destroyClientPG(client)
     res.json({
       // resultado das querys aqui!
     })
   } catch (e) {
-    await client.query('ROLLBACK')
     await destroyClientPG(client)
     res.status(400).json({
       message: 'Mensagem de erro aqui!'
@@ -32,16 +39,13 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   const client = await createClientPG()
-  await client.query('BEGIN')
   try {
     // querys
-    await client.query('COMMIT')
     await destroyClientPG(client)
     res.json({
       // resultado das querys aqui!
     })
   } catch (e) {
-    await client.query('ROLLBACK')
     await destroyClientPG(client)
     res.status(400).json({
       message: 'Mensagem de erro aqui!'
@@ -51,16 +55,13 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   const client = await createClientPG()
-  await client.query('BEGIN')
   try {
     // querys
-    await client.query('COMMIT')
     await destroyClientPG(client)
     res.json({
       // resultado das querys aqui!
     })
   } catch (e) {
-    await client.query('ROLLBACK')
     await destroyClientPG(client)
     res.status(400).json({
       message: 'Mensagem de erro aqui!'
