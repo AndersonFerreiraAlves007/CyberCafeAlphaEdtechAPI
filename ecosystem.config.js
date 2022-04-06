@@ -5,6 +5,14 @@ module.exports = {
       script: 'server.js',
       cwd: './',
       watch: true,
+      ignore_watch: [
+        '.git',
+        '.vscode',
+        '.editorconfig',
+        '.eslintrc.js',
+        '.prettierrc.js',
+        'README.md'
+      ],
       env: {
         SERVER_PORT: 3333,
         DATABASE_PORT: 5432,
@@ -12,6 +20,7 @@ module.exports = {
         DATABASE_NAME: 'cybercafe',
         DATABASE_USER: 'postgres',
         DATABASE_PASSWORD: '58310502',
+        API_VERSION: '1.0.0'
       },
       env_production: {
         SERVER_PORT: 3333,
@@ -20,8 +29,9 @@ module.exports = {
         DATABASE_NAME: 'cybercafe',
         DATABASE_USER: 'postgres',
         DATABASE_PASSWORD: '58310502',
-      },
-    },
-  ],
-  
+        API_VERSION: '1.0.0'
+      }
+    }
+  ]
+
 }
