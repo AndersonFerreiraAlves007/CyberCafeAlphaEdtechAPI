@@ -42,7 +42,7 @@ router.get('/:id', authorization, verifyId, async (req, res) => {
 })
 
 router.post('/', authorization, roomsCreate, async (req, res) => {
-  const { size, description } = req.query
+  const { size, description } = req.body
   const client = await createClientPG()
   try {
     const text = 'INSERT INTO public.rooms (size, description, create_by, create_in, update_by, update_in) VALUES ($1, $2, $3, $4, $5, $6);'

@@ -42,7 +42,7 @@ router.get('/:id', authorization, verifyId, async (req, res) => {
 })
 
 router.post('/', authorization, clientsCreate, async (req, res) => {
-  const { name, email, cpf, username } = req.query
+  const { name, email, cpf, username } = req.body
   const client = await createClientPG()
   try {
     const text = 'INSERT INTO public.clients (name, username, email, cpf, create_by, create_in, update_by, update_in) VALUES ($1, $2, $3, $4, $5, $6, $7, $8);'
