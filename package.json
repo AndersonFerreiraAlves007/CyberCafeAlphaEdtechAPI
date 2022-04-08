@@ -15,9 +15,11 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "express": "^4.17.3",
-    "pg": "^8.7.3"
+    "pg": "^8.7.3",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "eslint": "^7.32.0",

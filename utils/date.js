@@ -18,6 +18,15 @@ function formatTimestamps (date) {
   return dtstring
 }
 
+function formatTime (date) {
+  const dt = date
+  const dtstring = dt.getHours() +
+      ':' + pad(dt.getMinutes(), 2) +
+      ':' + pad(dt.getSeconds(), 2) + '.00-03'
+  return dtstring
+}
+
 module.exports = {
-  formatTimestamps
+  formatTimestamps,
+  formatTime
 }

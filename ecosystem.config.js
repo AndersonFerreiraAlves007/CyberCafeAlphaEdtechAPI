@@ -20,7 +20,8 @@ module.exports = {
         DATABASE_NAME: 'cybercafe',
         DATABASE_USER: 'postgres',
         DATABASE_PASSWORD: '58310502',
-        API_VERSION: '1.0.0'
+        API_VERSION: '1.0.0',
+        SECRET_JWT_ACCESS_TOKEN: 'fabio_professor'
       },
       env_production: {
         SERVER_PORT: 3333,
@@ -29,7 +30,8 @@ module.exports = {
         DATABASE_NAME: 'cybercafe',
         DATABASE_USER: 'postgres',
         DATABASE_PASSWORD: '58310502',
-        API_VERSION: '1.0.0'
+        API_VERSION: '1.0.0',
+        SECRET_JWT_ACCESS_TOKEN: 'fabio_professor'
       }
     }
   ]
